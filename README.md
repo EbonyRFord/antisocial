@@ -17,3 +17,6 @@ Resources:
 Class Modules and ChatGPT
 
 Repository: https://github.com/EbonyRFord/mongo-social-api
+
+walkthrough: https://drive.google.com/file/d/1DvAi4hJBBUoUu04W1FAIErIR58d8YECq/view
+
