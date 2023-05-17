@@ -1,13 +1,5 @@
 # mongo-social-api
 
-USE THE SOLVED FOLDER AND REPLICATE IT 
-
-share thoughts (create and delete)
-read all thoughts (retrieve)
-be able to comment thoughts on additional posts (update? create?)
-
-create a friends list (create, retreive, update, delete)
-
 Project Name: AntiSocial
 
 Project Description:
