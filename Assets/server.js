@@ -206,21 +206,20 @@ app.post('/user-reactions/:user', (req, res) => {
 
 //delete reaction
 
-app.delete('/user-reactions/:user/:reactionId', (req, res) => {
+app.delete('/user-reactions/:user', (req, res) => {
   const user = req.params.user;
-  const reactionId = req.params.reactionId;
 
   db.collection('userList')
     .findOneAndUpdate(
       { user },
-      { $pull: { reactions: { _id: reactionId } } },
+      { $unset: { reactions: '' } },
       { returnOriginal: false }
     )
     .then(updatedDocument => {
       if (updatedDocument) {
         res.status(200).json(updatedDocument.value);
       } else {
-        res.status(404).json({ error: 'User or reaction not found' });
+        res.status(404).json({ error: 'User not found' });
       }
     })
     .catch(err => {
